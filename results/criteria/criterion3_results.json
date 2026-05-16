@@ -1,0 +1,12 @@
+{
+  "task": "modular_arithmetic_mod113",
+  "n_pairs": 200,
+  "chance_precision": 0.008849557522123894,
+  "unpatched_base_accuracy": 1.0,
+  "unpatched_source_accuracy": 0.0,
+  "criterion3": {
+    "level1_precision": 0.9950000047683716,
+    "level2_precision": 1.0,
+    "level3_precision": 1.0
+  }
+}
