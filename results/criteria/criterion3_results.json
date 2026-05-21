@@ -5,8 +5,8 @@
   "unpatched_base_accuracy": 1.0,
   "unpatched_source_accuracy": 0.0,
   "criterion3": {
-    "level1_precision": 0.9950000047683716,
-    "level2_precision": 1.0,
+    "level1_precision": 0.0,
+    "level2_precision": 0.09000000357627869,
     "level3_precision": 1.0
   }
 }
