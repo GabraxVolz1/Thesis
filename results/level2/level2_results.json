@@ -1,48 +1,38 @@
 {
   "level": 2,
   "task": "modular_arithmetic_mod113",
-  "n_eval": 200,
-  "n_components": 15,
-  "components": [
-    "head_0_pos_a",
-    "head_1_pos_a",
-    "head_2_pos_a",
-    "head_3_pos_a",
-    "mlp_pos_a",
-    "head_0_pos_b",
-    "head_1_pos_b",
-    "head_2_pos_b",
-    "head_3_pos_b",
-    "mlp_pos_b",
-    "head_0_pos_eq",
-    "head_1_pos_eq",
-    "head_2_pos_eq",
-    "head_3_pos_eq",
-    "mlp_pos_eq"
+  "method": "logit_fourier_components",
+  "key_freqs": [
+    3,
+    14,
+    1
   ],
-  "clean_metric_mean": 42.82773971557617,
-  "corrupted_metric_mean": -11.261224746704102,
-  "criterion1_faithfulness": 0.9999941110499413,
-  "criterion2_component_count": 1,
-  "criterion2_compression_ratio": 0.06666666666666667,
+  "n_components": 6,
+  "components": [
+    "cos_3",
+    "sin_3",
+    "cos_14",
+    "sin_14",
+    "cos_1",
+    "sin_1"
+  ],
+  "clean_loss": 0.00555871007964015,
+  "corrupted_loss": 4.869265079498291,
+  "criterion1_faithfulness": 0.9999421232520169,
+  "criterion2_component_count": 4,
+  "criterion2_compression_ratio": 0.6666666666666666,
   "circuit_components": [
-    "mlp_pos_eq"
+    "cos_3",
+    "sin_14",
+    "cos_14",
+    "sin_3"
   ],
   "all_recovery_scores": {
-    "head_0_pos_a": 0.0,
-    "head_1_pos_a": 0.0,
-    "head_2_pos_a": 0.0,
-    "head_3_pos_a": 0.0,
-    "mlp_pos_a": 0.0,
-    "head_0_pos_b": 0.0,
-    "head_1_pos_b": 0.0,
-    "head_2_pos_b": 0.0,
-    "head_3_pos_b": 0.0,
-    "mlp_pos_b": 0.0,
-    "head_0_pos_eq": -6.298002877192893e-05,
-    "head_1_pos_eq": 9.58100437700621e-05,
-    "head_2_pos_eq": -7.07202954659034e-05,
-    "head_3_pos_eq": 4.384975687452051e-05,
-    "mlp_pos_eq": 0.9999941110499413
+    "cos_3": 0.29615899755229447,
+    "sin_3": 0.1456285264434541,
+    "cos_14": 0.14767687352480321,
+    "sin_14": 0.17131154195896772,
+    "cos_1": 0.00025157031593078447,
+    "sin_1": 0.005015229739454123
   }
 }
