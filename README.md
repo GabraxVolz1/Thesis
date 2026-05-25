@@ -44,6 +44,7 @@ explanatory_pluralism_thesis/
 │   ├── 00_setup_and_data.ipynb         # Downloads and caches GPT-2 Small; environment setup
 │   ├── 01_tasks.ipynb                  # Defines and validates the two tasks: IOI and grokking (empty)
 │   ├── 02_level1_neurons.ipynb         # L1 — neuron / parameter level circuit extraction
+│   ├── 02bis_level1_neurons(IOI).ipynb         # L1 — neuron / parameter level circuit extraction (IOI task) (to revisit)
 │   ├── 03_level2_heads.ipynb           # L2 — attention heads + MLP sublayers (grokking task)
 │   ├── 03bis_level2_heads(IOI).ipynb   # L2 — head-level activation patching (IOI task)
 │   ├── 04_level3_sae.ipynb             # L3 — trains an SAE on grokking MLP activations; extracts SAE-feature circuits
