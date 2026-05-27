@@ -6,48 +6,49 @@
   "d_mlp": 512,
   "n_eval": 200,
   "key_freqs": [
-    3,
     14,
-    1
+    49,
+    17
   ],
   "n_components": 4,
   "components": [
     {
-      "name": "freq_3",
-      "k": 3,
-      "n_neurons": 233
-    },
-    {
       "name": "freq_14",
       "k": 14,
-      "n_neurons": 123
+      "n_neurons": 250
     },
     {
-      "name": "freq_1",
-      "k": 1,
-      "n_neurons": 15
+      "name": "freq_49",
+      "k": 49,
+      "n_neurons": 72
+    },
+    {
+      "name": "freq_17",
+      "k": 17,
+      "n_neurons": 65
     },
     {
       "name": "noise_cluster",
       "k": -1,
-      "n_neurons": 141
+      "n_neurons": 125
     }
   ],
-  "clean_metric_mean": 42.82773971557617,
-  "corrupted_metric_mean": -11.260904312133789,
-  "criterion1_faithfulness": 1.0000000352633853,
-  "criterion2_component_count": 3,
-  "criterion2_compression_ratio": 0.75,
+  "clean_metric_mean": 38.21595764160156,
+  "corrupted_metric_mean": -7.079824447631836,
+  "criterion1_faithfulness": 1.000000042108749,
+  "criterion2_component_count": 4,
+  "criterion2_compression_ratio": 1.0,
   "circuit_components": [
     "freq_14",
-    "noise_cluster",
-    "freq_3"
+    "freq_17",
+    "freq_49",
+    "noise_cluster"
   ],
-  "circuit_neuron_count": 497,
+  "circuit_neuron_count": 512,
   "all_recovery_scores": {
-    "freq_3": 0.18743101379835111,
-    "freq_14": 0.4494894672852053,
-    "freq_1": 0.0,
-    "noise_cluster": 0.3630795740154833
+    "freq_14": 0.45606661587228653,
+    "freq_49": 0.14431675691554088,
+    "freq_17": 0.2580893748930964,
+    "noise_cluster": 0.14152734706376116
   }
 }
