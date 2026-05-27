@@ -2,37 +2,40 @@
   "level": 2,
   "task": "modular_arithmetic_mod113",
   "method": "logit_fourier_components",
+  "metric": "logit_of_correct_token",
   "key_freqs": [
-    3,
     14,
-    1
+    49,
+    17
   ],
   "n_components": 6,
   "components": [
-    "cos_3",
-    "sin_3",
     "cos_14",
     "sin_14",
-    "cos_1",
-    "sin_1"
+    "cos_49",
+    "sin_49",
+    "cos_17",
+    "sin_17"
   ],
-  "clean_loss": 0.00555871007964015,
-  "corrupted_loss": 4.869265079498291,
-  "criterion1_faithfulness": 0.9999421232520169,
-  "criterion2_component_count": 4,
-  "criterion2_compression_ratio": 0.6666666666666666,
+  "clean_metric_mean": 38.93400192260742,
+  "corrupted_metric_mean": -6.175928592681885,
+  "threshold_tau": 0.1,
+  "criterion1_faithfulness": 0.8540569354736823,
+  "criterion2_description_length": 0.6666666666666666,
+  "criterion2_circuit_components": 4,
+  "criterion2_total_components": 6,
   "circuit_components": [
-    "cos_3",
-    "sin_14",
     "cos_14",
-    "sin_3"
+    "sin_14",
+    "cos_17",
+    "sin_17"
   ],
   "all_recovery_scores": {
-    "cos_3": 0.29615899755229447,
-    "sin_3": 0.1456285264434541,
-    "cos_14": 0.14767687352480321,
-    "sin_14": 0.17131154195896772,
-    "cos_1": 0.00025157031593078447,
-    "sin_1": 0.005015229739454123
+    "cos_14": 0.2460851729837867,
+    "sin_14": 0.3184584275628041,
+    "cos_49": 0.06983444985196569,
+    "sin_49": 0.07610857239212303,
+    "cos_17": 0.1585234982747582,
+    "sin_17": 0.1309898465622307
   }
 }
