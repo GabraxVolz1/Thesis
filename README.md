@@ -38,29 +38,36 @@ explanatory_pluralism_thesis/
 │
 ├── data/                               # Pre-trained model checkpoints
 │   ├── grokking_model.pt               # 1-layer transformer trained on modular addition (Nanda et al., 2023)
-│   └── grokking_sae.pt                 # Sparse autoencoder trained on the grokking model's MLP activations
+│   ├── grokking_sae.pt                 # Sparse autoencoder trained on the grokking model's MLP activations
+│   ├── grokking_sae_l1_2e-1.pt         # Grokking SAE variant (L1 penalty 2e-1)
+│   ├── gpt2_sae_layer3.pt              # SAE trained on GPT-2 Small layer 3 residual stream (IOI task)
+│   └── gpt2_sae_layer6.pt              # SAE trained on GPT-2 Small layer 6 residual stream (IOI task)
 │
 ├── notebooks/                          # Numbered analysis notebooks (run in order)
 │   ├── 00_setup_and_data.ipynb         # Downloads and caches GPT-2 Small; environment setup
-│   ├── 01_tasks.ipynb                  # Defines and validates the two tasks: IOI and grokking (empty)
-│   ├── 02_level1_neurons.ipynb         # L1 — neuron / parameter level circuit extraction
-│   ├── 02bis_level1_neurons(IOI).ipynb         # L1 — neuron / parameter level circuit extraction (IOI task) (to revisit)
+│   ├── 01_tasks.ipynb                  # Defines and validates the two tasks: IOI and grokking
+│   ├── 02_level1_neurons.ipynb         # L1 — neuron / parameter level circuit extraction (grokking)
+│   ├── 02bis_level1_neurons(IOI).ipynb # L1 — neuron / parameter level circuit extraction (IOI task)
 │   ├── 03_level2_heads.ipynb           # L2 — attention heads + MLP sublayers (grokking task)
 │   ├── 03bis_level2_heads(IOI).ipynb   # L2 — head-level activation patching (IOI task)
-│   ├── 04_level3_sae.ipynb             # L3 — trains an SAE on grokking MLP activations; extracts SAE-feature circuits
-│   ├── 05_evaluation_criteria.ipynb    # Computes the three criteria: faithfulness, compressibility, interventional precision (mostly the third since the first two are also in the other notebooks)
-│   ├── 06_causal_abstraction.ipynb     # Cross-level causal abstraction / IIT alignment checks (L3→L2→L1) (still empty)
-│   └── 07_results_and_plots.ipynb      # Aggregates all results and produces thesis figures (still empty)
+│   ├── 04_level3_sae.ipynb             # L3 — SAE on grokking MLP activations; SAE-feature circuits
+│   ├── 04bis_level3_sae(IOI).ipynb     # L3 — SAE-feature circuits on GPT-2 Small (IOI task)
+│   ├── 05_evaluation_criteria.ipynb    # Computes faithfulness, compressibility, interventional precision
+│   ├── 06_causal_abstraction.ipynb     # Cross-level causal abstraction / IIT alignment checks (L3→L2→L1)
+│   └── 07_results_and_plots.ipynb      # Aggregates all results and produces thesis figures
 │
 ├── results/                            # Auto-generated outputs (committed for reproducibility)
-│   ├── level1/                         # L1 scores (JSON) + recovery and cluster plots
-│   ├── level2/                         # L2 scores (JSON) + recovery plot (grokking)
-│   ├── level2IOI/                      # L2 scores and plots (IOI task)
-│   ├── level3/                         # L3 scores (JSON) + feature analysis and FFT plots
-│   ├── criteria/                       # Three-criteria summary plot and Criterion 3 JSON
+│   ├── level1/                         # L1 scores (JSON) + recovery and cluster plots (grokking)
+│   ├── level1IOI/                      # L1 scores (JSON) + neuron recovery plot (IOI task)
+│   ├── level2/                         # L2 scores (JSON) + recovery plots (grokking)
+│   ├── level2IOI/                      # L2 scores (JSON) + recovery plot (IOI task)
+│   ├── level3/                         # L3 scores (JSON) + feature analysis and FFT plots (grokking)
+│   ├── level3IOI/                      # L3 scores (JSON) + recovery and top-features plots (IOI task)
+│   ├── criteria/                       # Three-criteria summary plot, Criterion 3 JSON, random-baseline plot
 │   └── causal/                         # Causal abstraction alignment outputs (empty)
 │
-├── src/                                # Reusable Python modules imported by the notebooks (still empty)
+├── src/                                # Reusable Python modules imported by the notebooks
+│   ├── __init__.py
 │   ├── tasks.py                        # Dataset builders for IOI and grokking
 │   ├── patching.py                     # Activation patching utilities
 │   ├── metrics.py                      # Faithfulness, compressibility, and interventional precision
