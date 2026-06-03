@@ -25,7 +25,7 @@ common criteria on shared tasks.
 
 ## 3. Experimental design (one-screen summary)
 
-**Model**   | GPT-2 small (124M) primarily; second model for robustness if feasible  
+**Model**   | GPT-2 small (124M) primarily; and custom model  
 **Tasks**   | `ioi` (Wang et al., 2022) · `grokking` (Nanda et al., 2023)            
 **Levels**  | `L1` neurons / params · `L2` attention heads · `L3` SAE features 
 **Metrics** | `faithfulness` (recovery score) · `compressibility` (description lenght, component count) · `intervention_precision` (predicted-vs-observed intervention effects) 
@@ -44,7 +44,6 @@ explanatory_pluralism_thesis/
 │
 ├── notebooks/                          # Numbered analysis notebooks (run in order)
 │   ├── 00_setup_and_data.ipynb             # Downloads and caches GPT-2 Small; environment setup
-│   ├── 01_tasks.ipynb                      # Defines and validates the two tasks: IOI and grokking
 │   ├── 02_level1_neurons.ipynb             # L1 — Fourier frequency neuron clusters, greedy circuit (grokking)
 │   ├── 02bis_level1_neurons(IOI).ipynb     # L1 — gradient attribution + greedy neuron circuit (IOI task)
 │   ├── 03_level2_heads.ipynb               # L2 — attention-head activation patching, greedy circuit (grokking)
@@ -52,8 +51,7 @@ explanatory_pluralism_thesis/
 │   ├── 04_level3_sae.ipynb                 # L3 — SAE on grokking MLP activations; SAE-feature circuits
 │   ├── 04bis_level3_saeMLP3(IOI).ipynb     # L3 — SAE-feature circuits on GPT-2 Small MLP layer 3 (IOI task)
 │   ├── 04bis_level3_saeMLP9(IOI).ipynb     # L3 — SAE-feature circuits on GPT-2 Small MLP layer 9 (IOI task)
-│   ├── 05_evaluation_criteria.ipynb        # Criterion 3 (interventional precision) for all levels and tasks
-│   └── 07_results_and_plots.ipynb          # Aggregates all results and produces thesis figures
+│   └── 05_evaluation_criteria.ipynb        # Criterion 3 (interventional precision) for all levels and tasks
 │
 ├── results/                            # Auto-generated outputs (committed for reproducibility)
 │   ├── level1/                         # L1 scores (JSON) + recovery and cluster plots (grokking)
@@ -62,15 +60,7 @@ explanatory_pluralism_thesis/
 │   ├── level2IOI/                      # L2 scores (JSON) + recovery plot (IOI task)
 │   ├── level3/                         # L3 scores (JSON) + feature analysis and FFT plots (grokking)
 │   ├── level3IOI/                      # L3 scores (JSON) + recovery and top-features plots (IOI task, both MLP3 and MLP9)
-│   ├── criteria/                       # Three-criteria summary plot, Criterion 3 JSON, random-baseline plots
-│   └── causal/                         # Causal abstraction alignment outputs (empty)
-│
-├── src/                                # Reusable Python modules imported by the notebooks
-│   ├── __init__.py
-│   ├── tasks.py                        # Dataset builders for IOI and grokking
-│   ├── patching.py                     # Activation patching utilities
-│   ├── metrics.py                      # Faithfulness, compressibility, and interventional precision
-│   └── iit.py                          # Causal abstraction / IIT alignment helpers
+│   └── criteria/                       # Three-criteria summary plot, Criterion 3 JSON, random-baseline plots
 │
 ├── requirements.txt                    # Python dependencies
 └── README.md                           # This file
