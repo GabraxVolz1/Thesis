@@ -7,7 +7,7 @@
     "unpatched_source_accuracy": 0.0,
     "criterion3": {
       "level1_precision": 0.9950000047683716,
-      "level2_precision": 0.6549999713897705,
+      "level2_precision": 1.0,
       "level3_precision": 1.0,
       "level3_random_baseline": {
         "n_trials": 100,
@@ -142,37 +142,80 @@
           6
         ]
       ],
-      "level3_precision": 0.0,
-      "level3_random_baseline": {
-        "n_trials": 20,
-        "k_features": 96,
-        "mean": 0.0,
-        "std": 0.0,
-        "all_precisions": [
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0,
-          0.0
-        ]
+      "level3_mlp3": {
+        "target_layer": 3,
+        "precision": 0.0,
+        "circuit_features": 96,
+        "faithfulness": 0.9011780109830889,
+        "description_length": 0.0078125,
+        "random_baseline": {
+          "n_trials": 20,
+          "k_features": 96,
+          "mean": 0.0,
+          "std": 0.0,
+          "all_precisions": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "lift_over_random": 0.0,
+        "verdict": "artifact"
       },
-      "level3_lift_over_random": 0.0,
-      "level3_verdict": "ARTIFACT circuit precision  random; driven by SAE reconstruction bulk"
+      "level3_mlp9": {
+        "target_layer": 9,
+        "precision": 0.0,
+        "circuit_features": 338,
+        "faithfulness": 0.9006040939049766,
+        "description_length": 0.027506510416666668,
+        "random_baseline": {
+          "n_trials": 20,
+          "k_features": 338,
+          "mean": 0.0,
+          "std": 0.0,
+          "all_precisions": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "lift_over_random": 0.0,
+        "verdict": "artifact"
+      }
     }
   }
 }
