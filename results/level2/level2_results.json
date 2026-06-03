@@ -1,41 +1,28 @@
 {
   "level": 2,
   "task": "modular_arithmetic_mod113",
-  "method": "logit_fourier_components",
+  "method": "activation_patching_head_restoration",
   "metric": "logit_of_correct_token",
-  "key_freqs": [
-    14,
-    49,
-    17
-  ],
-  "n_components": 6,
-  "components": [
-    "cos_14",
-    "sin_14",
-    "cos_49",
-    "sin_49",
-    "cos_17",
-    "sin_17"
-  ],
-  "clean_metric_mean": 38.93400192260742,
-  "corrupted_metric_mean": -6.175928592681885,
-  "threshold_tau": 0.1,
-  "criterion1_faithfulness": 0.8540569354736823,
-  "criterion2_description_length": 0.6666666666666666,
-  "criterion2_circuit_components": 4,
-  "criterion2_total_components": 6,
-  "circuit_components": [
-    "cos_14",
-    "sin_14",
-    "cos_17",
-    "sin_17"
+  "unit": "attention_head",
+  "n_units_total": 4,
+  "n_eval": 200,
+  "clean_metric_mean": 38.21595764160156,
+  "corrupted_metric_mean": -6.737849235534668,
+  "rs_target": 0.9,
+  "criterion1_faithfulness": 0.9999999787854609,
+  "criterion2_description_length": 1.0,
+  "criterion2_circuit_units": 4,
+  "criterion2_total_units": 4,
+  "circuit_heads": [
+    "head_0",
+    "head_2",
+    "head_3",
+    "head_1"
   ],
   "all_recovery_scores": {
-    "cos_14": 0.2460851729837867,
-    "sin_14": 0.3184584275628041,
-    "cos_49": 0.06983444985196569,
-    "sin_49": 0.07610857239212303,
-    "cos_17": 0.1585234982747582,
-    "sin_17": 0.1309898465622307
+    "head_0": 0.17338454307404272,
+    "head_1": 0.1259102840533449,
+    "head_2": 0.16891615783948077,
+    "head_3": 0.1312153150240263
   }
 }

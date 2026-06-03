@@ -35,15 +35,15 @@
   ],
   "clean_metric_mean": 38.21595764160156,
   "corrupted_metric_mean": -7.079824447631836,
-  "threshold_tau": 0.1,
+  "rs_target": 0.9,
   "criterion1_faithfulness": 1.000000042108749,
   "criterion2_description_length": 1.0,
   "criterion2_circuit_neurons": 512,
   "criterion2_total_neurons": 512,
   "circuit_components": [
     "freq_14",
-    "freq_49",
     "freq_17",
+    "freq_49",
     "noise_cluster"
   ],
   "all_recovery_scores": {
